@@ -6,11 +6,19 @@ npm install
 
 .env.example -> .env
 
-![image](https://github.com/user-attachments/assets/67022b63-36a0-4894-b10e-c91ef3e6f26b)
+![image](https://github.com/user-attachments/assets/4a87a4c1-56d1-4aaf-a0d7-d1e590902dc6)
 
-![image](https://github.com/user-attachments/assets/95b1dcbd-a48a-4455-98ec-d79fa585bb9c)
+connect
+![image](https://github.com/user-attachments/assets/a78226ca-25b7-4157-8d8c-0b73ed9c0c1b)
+
+thay api key
+![image](https://github.com/user-attachments/assets/b6a92bd7-a7b9-442d-a8de-52716f96e236)
+
+
 
 # 3. URL Configuration
 
-![image](https://github.com/user-attachments/assets/803eaf5c-e7f1-4467-8d6b-c2eba3b594ba)
+![image](https://github.com/user-attachments/assets/57588817-f30d-4a47-ab98-1362123533d4)
+
+
 
