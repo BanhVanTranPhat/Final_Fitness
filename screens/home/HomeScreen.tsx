@@ -48,6 +48,10 @@ export default function HomeScreen() {
     }
   };
 
+  const handleNavigateToWorkout = () => {
+    router.push("./workout-list");
+  }
+  
   if (isLoading) {
     return (
       <View style={styles.container}>
@@ -97,7 +101,7 @@ export default function HomeScreen() {
       <View style={styles.workoutCard}>
         <Text style={styles.workoutTitle}>Bài tập toàn thân</Text>
         <Text style={styles.workoutSubtitle}>5 bài tập</Text>
-        <TouchableOpacity style={styles.startButton}>
+        <TouchableOpacity style={styles.startButton} onPress={handleNavigateToWorkout}>
           <Text style={styles.startButtonText}>Bắt đầu</Text>
         </TouchableOpacity>
       </View>

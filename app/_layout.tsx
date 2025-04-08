@@ -68,6 +68,7 @@ export default function RootLayout() {
         <Stack.Screen name="home" options={{ headerShown: false }} />
         <Stack.Screen name="reset-password" options={{ headerShown: false }} />
         <Stack.Screen name="otp-verification" options={{ headerShown: false }} />
+        <Stack.Screen name="workout-list" options={{ headerShown: false }} />
       </Stack>
     </>
   );
