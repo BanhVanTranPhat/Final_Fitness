@@ -1,9 +1,9 @@
 // app/_layout.tsx
-import React, { useState, useEffect } from 'react';
-import { Stack, useRouter, SplashScreen } from 'expo-router';
-import { supabase } from '../lib/supabase'; // <-- Đảm bảo đường dẫn này đúng
-import { Session } from '@supabase/supabase-js';
-import { StatusBar } from 'expo-status-bar'; // Thêm StatusBar nếu bạn muốn
+import React, { useState, useEffect } from "react";
+import { Stack, useRouter, SplashScreen } from "expo-router";
+import { supabase } from "../lib/supabase"; // <-- Đảm bảo đường dẫn này đúng
+import { Session } from "@supabase/supabase-js";
+import { StatusBar } from "expo-status-bar"; // Thêm StatusBar nếu bạn muốn
 
 // Ngăn splash screen ẩn tự động
 SplashScreen.preventAutoHideAsync();
@@ -21,19 +21,21 @@ export default function RootLayout() {
       setInitialized(true);
       // Bây giờ mới ẩn splash screen
       SplashScreen.hideAsync();
-    })
+    });
 
     // Lắng nghe các thay đổi sau này
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        console.log('Auth Event:', event, 'Session:', !!session); // Log để debug
+        console.log("Auth Event:", event, "Session:", !!session); // Log để debug
         setSession(session);
 
         // --- LOGIC ĐIỀU HƯỚNG QUAN TRỌNG ---
-        if (event === 'PASSWORD_RECOVERY' && session) {
-          console.log('PASSWORD_RECOVERY event detected, redirecting to confirm screen...');
+        if (event === "PASSWORD_RECOVERY" && session) {
+          console.log(
+            "PASSWORD_RECOVERY event detected, redirecting to confirm screen..."
+          );
           // Không cần chờ initialized ở đây, sự kiện này là ưu tiên
-          router.replace('/reset-password');
+          router.replace("/reset-password");
         }
         // Bạn có thể thêm các điều hướng khác ở đây nếu cần
         // Ví dụ: chuyển về login khi SIGNED_OUT
@@ -67,8 +69,16 @@ export default function RootLayout() {
         <Stack.Screen name="register" options={{ headerShown: false }} />
         <Stack.Screen name="home" options={{ headerShown: false }} />
         <Stack.Screen name="reset-password" options={{ headerShown: false }} />
-        <Stack.Screen name="otp-verification" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="otp-verification"
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="workout-list" options={{ headerShown: false }} />
+        <Stack.Screen name="exercises" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="exercise-details"
+          options={{ headerShown: false }}
+        />
       </Stack>
     </>
   );

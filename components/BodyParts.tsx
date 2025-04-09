@@ -12,6 +12,7 @@ interface BodyPartCardProps {
     item: BodyPart;
     router: Router;
     index: number;
+    
 }
 
 // Component BodyPartCard

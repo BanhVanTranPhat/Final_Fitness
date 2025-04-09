@@ -1,0 +1,6 @@
+import ExercisesScreen from "../components/Exercises";
+import React from "react";
+
+export default function Exercises() {
+  return <ExercisesScreen />;
+}

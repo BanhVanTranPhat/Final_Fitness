@@ -1,7 +1,6 @@
 import { ImageSourcePropType } from "react-native";
 
-export const rapidApiKey: string =
-  "37b85982cemsh3bc946f6e8d5f52p16c47ejsnc356d000854e";
+export const rapidApiKey: string = process.env.RAPIDAPI_EXERCISEDB_KEY!;
 
 export const sliderImages: ImageSourcePropType[] = [
   require("../assets/images/slide1.png"),
